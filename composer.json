@@ -1,0 +1,36 @@
+{
+    "name": "denis-kisel/smscru",
+    "description": "smscru api class for laravel",
+    "authors": [
+        {
+            "name": "Denis Kisel",
+            "email": "denis.kisel92@gmail.com",
+            "homepage": "http://digital-elephant.com.ua"
+        }
+    ],
+    "homepage": "https://github.com/denis-kisel/smscru-laravel",
+    "keywords": ["Laravel", "SMSCRU", "api"],
+    "require": {
+        "illuminate/support": "~5"
+    },
+    "autoload": {
+        "psr-4": {
+            "DenisKisel\\SMSCRU\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "DenisKisel\\SMSCRU\\Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "DenisKisel\\SMSCRU\\SMSCRUServiceProvider"
+            ],
+            "aliases": {
+                "SMSCRU": "DenisKisel\\SMSCRU\\Facades\\SMSCRU"
+            }
+        }
+    }
+}
