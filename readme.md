@@ -7,7 +7,7 @@
 Via Composer
 
 ``` bash
-$ composer require denis-kisel/smscru-laravel
+$ composer require denis-kisel/smscru
 ```
 
 ## Settings
