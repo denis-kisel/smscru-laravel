@@ -70,11 +70,12 @@ class SMSCRU
 
     public function __call($name, $arguments) {
         $vars = get_class_vars(__CLASS__);
-        if (in_array($name, $vars)) {
+        if (in_array($name, array_keys($vars))) {
             $this->{$name} = array_shift($arguments);
             return $this;
         } else {
-            throw new SMSCRUException('Method is not exists in the SMSCRU class. File:' . __FILE__ . ' Line:' . __LINE__);
+            throw new SMSCRUException('Method ' . $name . ' is not exists in the SMSCRU class. File:' . __FILE__ . ' Line:' .
+                __LINE__);
         }
     }
 
